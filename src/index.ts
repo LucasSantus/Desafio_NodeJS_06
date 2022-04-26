@@ -38,9 +38,11 @@ app.use(express.json());
  * Server Activation
  */
 
-async function register_students(students_length){
+async function register_students(students_length: number){
 	for(let counter = 1; counter <= students_length; counter++){
+		
 		console.log(`\nInserção do ${counter}º aluno`)
+
 		let name = readline.question('\nNome do aluno: ')
 		let age = parseInt(readline.question('Idade do aluno: '))
 		let note = parseFloat(readline.question('Nota do aluno: '))
@@ -55,12 +57,12 @@ async function register_students(students_length){
 	}
 }
 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
 	console.log(`Listening on port ${PORT}`);
 
 	let students_length = parseInt(readline.question('\nQuantidade de alunos: '))
 
-	register_students(students_length);
+	await register_students(students_length);
 
 	console.log("\nprograma finalizado!")
 });
