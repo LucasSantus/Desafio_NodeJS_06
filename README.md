@@ -27,6 +27,8 @@ yarn install
 yarn prisma migrate dev
 
 yarn dev
+
+yarn prisma studio
 ```
 --------------------------------------------------------------------------------------
 
