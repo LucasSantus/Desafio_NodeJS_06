@@ -17,10 +17,16 @@ _"Criar um sisteminha simples para cadastro de novos alunos utilizando NodeJs e 
 
 --------------------------------------------------------------------------------------
 
-<h4 id="rodando">Rodando o Projeto</h4>
+<h3 id="rodando">Rodando o Projeto</h4>
+
+<h4 id="preparando">Preparando o Projeto</h4>
 
 ```
+yarn install
 
+yarn prisma migrate dev
+
+yarn dev
 ```
 --------------------------------------------------------------------------------------
 
